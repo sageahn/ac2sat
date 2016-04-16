@@ -1,26 +1,38 @@
-import React, { Component, PropTypes } from 'react';
-
-const propTypes = {
-  data: PropTypes.array.isRequired,
-};
-
-const defaultProps = {
-  data: [],
-};
+import React, { Component } from 'react';
+import QuestionList from './QuestionList';
 
 class App extends Component {
+  getInitialState() {
+    return { questions: [] };
+  }
+  componentDidMount() {
+    this.fillQuestionList();
+  }
+  fillQuestionList() {
+    // Step 1 Q1
+    let q1 = { number: 1, answer: '' };
+    if (!null) {
+      q1 = { number: 1, answer: 'A' };
+    }
+    /*
+    if (!undefined) {
+      q1.answer += 'B';
+    }
+    if (!'') {
+      q1.answer += 'D';
+    }
+    */
+    this.setState({ questions: [q1, { number: 2 }, { number: 3 }, { number: 4 }] });
+  }
   render() {
     return (
-      <div className="commentBox">
-        <h1> Comments </h1>
-        <CommentList data={this.props.data} />
-        <CommentForm />
+      <div className="javascrtipStudy">
+        <h1> Javascript Study </h1>
+        <h2> Step 1 </h2>
+        <QuestionList questions={this.state.questions} />
       </div>
     );
   }
 }
-
-App.propTypes = propTypes;
-App.defaultProps = defaultProps;
 
 export default App;

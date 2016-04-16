@@ -1,5 +1,5 @@
 {
-  "name": "Javascript Study App",
+  "name": "ac2sat-javascript-study-app",
   "version": "1.0.0",
   "description": "Javascript Study with AC2 Saturday Group",
   "main": "index.js",
@@ -46,6 +46,7 @@
     "eslint-config-rackt": "^1.1.1",
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0",
+    "express": "^4.13.4",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.3",
