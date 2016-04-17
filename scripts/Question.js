@@ -9,7 +9,7 @@ class Question extends Component {
   render() {
     return (
         <div className="question">
-            <h3> Question {this.props.qnumber}: 정답은 {this.props.answer} </h3>
+            <h3> Question {this.props.qnumber}: 답은 {this.props.answer} </h3>
         </div>
     );
   }
